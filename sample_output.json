@@ -1,20 +1,26 @@
 [
   {
-    "domain": "stripe.com",
-    "company_name": "Stripe",
-    "industry": "Fintech",
-    "employee_size": "8000+",
-    "value_proposition": "Financial infrastructure to grow your business",
-    "keywords": ["payments", "fintech", "API"],
-    "status": "enriched"
+    "domain": "postman.com",
+    "company_overview": "Postman is an API platform for building and using APIs.",
+    "target_audience_icp": "Developers building APIs",
+    "contact_points": ["support@postman.com"],
+    "key_leadership": [{"name": "Abhinav Asthana", "role": "CEO"}],
+    "data_confidence_score": 0.92
   },
   {
-    "domain": "notion.so",
-    "company_name": "Notion",
-    "industry": "SaaS",
-    "employee_size": "1000+",
-    "value_proposition": "All-in-one workspace for notes and docs",
-    "keywords": ["productivity", "SaaS", "workspace"],
-    "status": "enriched"
+    "domain": "supabase.com",
+    "company_overview": "Supabase is an open-source Firebase alternative for backend.",
+    "target_audience_icp": "Developers building full-stack apps",
+    "contact_points": ["support@supabase.com"],
+    "key_leadership": [{"name": "Paul Copplestone", "role": "CEO"}],
+    "data_confidence_score": 0.89
+  },
+  {
+    "domain": "vapi.ai",
+    "company_overview": "Vapi builds voice AI agents for phone calls.",
+    "target_audience_icp": "Companies building voice AI for support",
+    "contact_points": ["support@vapi.ai"],
+    "key_leadership": [{"name": "Jordan Dearsley", "role": "CEO"}],
+    "data_confidence_score": 0.85
   }
 ]
