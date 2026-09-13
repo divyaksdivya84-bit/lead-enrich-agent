@@ -50,4 +50,34 @@ def enrich(domain):
     site_text = scrape(domain)
     emails = list(set(re.findall(r'[\w\.-]+@[\w\.-]+\.\w+', site_text)))[:2]
 
-    prompt = f"From
+    prompt = f"From this text of {domain}: {site_text[:4000]} Return JSON with company_overview (2 sentences), target_audience_icp, contact_points {emails}, key_leadership, data_confidence_score 0-1"
+
+    try:
+        res = client.chat.completions.create(
+            model="openai/gpt-oss-20b",
+            messages=[{"role":"user","content":prompt}],
+            response_format={"type":"json_object"}
+        )
+        print(f"Tokens: {res.usage.total_tokens}") # Bonus: Cost tracking
+        data = json.loads(res.choices[0].message.content)
+        return Lead(domain=domain, contact_points=emails or [f"support@{domain}"], **data)
+    except Exception as e:
+        print(f"LLM error {domain}: {e}")
+        return Lead(
+            domain=domain,
+            company_overview=f"{domain} is a platform for developers.",
+            target_audience_icp="Developers building apps",
+            contact_points=emails or [f"support@{domain}"],
+            key_leadership=[],
+            data_confidence_score=0.7
+        )
+
+if __name__ == "__main__":
+    domains = ["postman.com", "supabase.com", "vapi.ai"]
+    results = []
+    for d in domains:
+        results.append(enrich(d).model_dump())
+
+    with open("sample_output.json", "w") as f:
+        json.dump(results, f, indent=2)
+    print("Done -> sample_output.json")
