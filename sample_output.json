@@ -1,0 +1,20 @@
+[
+  {
+    "domain": "stripe.com",
+    "company_name": "Stripe",
+    "industry": "Fintech",
+    "employee_size": "8000+",
+    "value_proposition": "Financial infrastructure to grow your business",
+    "keywords": ["payments", "fintech", "API"],
+    "status": "enriched"
+  },
+  {
+    "domain": "notion.so",
+    "company_name": "Notion",
+    "industry": "SaaS",
+    "employee_size": "1000+",
+    "value_proposition": "All-in-one workspace for notes and docs",
+    "keywords": ["productivity", "SaaS", "workspace"],
+    "status": "enriched"
+  }
+]
