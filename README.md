@@ -1,15 +1,20 @@
-# Lead Enrichment Agent
+# Lead Enrichment Agent - SoftwareBrio Assignment
 
-AI agent that takes company domain and enriches it.
+Python agent that takes company domains and enriches them using scraping + Groq LLM.
 
-### What it does:
-1. Scrapes company website (About page)
-2. Uses Groq AI to extract: industry, size, value proposition, keywords
-3. Returns clean JSON
+### Architecture (matches assignment requirements)
+- **Step 1 Scraping**: Fetches homepage + /about, /team, /company, /contact, /pricing. Uses requests with Playwright fallback for JS sites. Handles 404, 403 bot blocker, timeouts gracefully.
+- **Step 2 Token Opt**: Strips script, style, nav, footer, svg to save tokens. Extracts clean text only.
+- **Step 3 LLM**: Uses Groq `openai/gpt-oss-20b` with Pydantic structured output (EnrichedLead model) to extract company_overview, ICP, contact_points, leadership, confidence score.
+- **Step 4 Resilience**: Try/except for each domain, never crashes mid-run.
+- **Bonus Cost Tracking**: Logs tokens and estimated cost per domain.
 
-### How to run:
-pip install -r requirements.txt
-python main.py
+### Setup
+1. pip install -r requirements.txt
+2. playwright install
+3. Create.env file: GROQ_API_KEY=your_key_here
+4. python main.py
+5. Check sample_output.json
 
-### Tech used:
-- Python, BeautifulSoup, Groq (Llama 3)
+Tested on: postman.com, supabase.com, vapi.ai
+Author: Divya K S - Final year ECE student
