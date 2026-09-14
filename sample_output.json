@@ -4,7 +4,7 @@
     "company_overview": "Postman is the world's leading API platform for developers to build, test and manage APIs at scale.",
     "target_audience_icp": "Developers, API teams, and enterprise architects",
     "contact_points": ["support@postman.com"],
-    "key_leadership": [{"name": "Abhinav Asthana", "role": "CEO"}],
+    "key_leadership": [{"name": "Abhinav Asthana", "role": "CEO", "linkedin_url": "https://linkedin.com/in/abhinavasthana"}],
     "data_confidence_score": 0.92
   },
   {
@@ -12,7 +12,7 @@
     "company_overview": "Supabase is an open source Firebase alternative providing database, auth and storage.",
     "target_audience_icp": "Developers building modern web apps",
     "contact_points": ["support@supabase.com"],
-    "key_leadership": [{"name": "Paul Copplestone", "role": "CEO"}],
+    "key_leadership": [{"name": "Paul Copplestone", "role": "CEO", "linkedin_url": null}],
     "data_confidence_score": 0.89
   },
   {
@@ -20,7 +20,7 @@
     "company_overview": "Vapi.ai is an enterprise grade platform for building voice AI assistants.",
     "target_audience_icp": "Large enterprises and Fortune 100 companies",
     "contact_points": ["support@vapi.ai"],
-    "key_leadership": [{"name": "Jordan Dearsley", "role": "CEO"}],
+    "key_leadership": [{"name": "Jordan Dearsley", "role": "CEO", "linkedin_url": null}],
     "data_confidence_score": 0.85
   }
 ]
