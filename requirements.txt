@@ -1,6 +1,5 @@
-requests
-beautifulsoup4
-python-dotenv
-openai
-pydantic
 playwright
+beautifulsoup4
+pydantic
+openai
+python-dotenv
